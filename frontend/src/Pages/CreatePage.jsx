@@ -1,6 +1,13 @@
 import { useColorModeValue } from '@/components/ui/color-mode';
 import { useProductStore } from '@/store/product';
-import { Box, Button, Container, Heading, Input, VStack, useToast } from '@chakra-ui/react';
+import { Box, Button, Container, Heading, Input, VStack } from '@chakra-ui/react';
+// import { Toaster, toaster } from "@/components/ui/toaster";
+// import { useToast } from '@chakra-ui/react';
+// import { useColorModeValue } from "@chakra-ui/react";
+
+// import { toaster } from "@/components/ui/toaster"
+
+
 import React, { useState } from 'react'
 
 const CreatePage = () => {
@@ -11,32 +18,34 @@ const CreatePage = () => {
     image: "",
   });
 
-  const toast = useToast()
+  // const toast = useToast()
 
   const {createProduct} = useProductStore()
 
   const handleAddProduct = async() => {
     const {success, message} = await createProduct(newProduct)
-    if(!success) {
-      toast({
-        title:"Error",
-        description: message,
-        status: "error",
-        isClosable: true,
-        // duration: 4000,
-      })
-    }
-    else{
-      toast({
-        title:"success",
-        description: message,
-        status: "success",
-        isClosable: true
-      })
-    }
+
+    // if (!success) {
+    //   toaster.create({
+    //     title: "Error",
+    //     description: message,
+    //     type: "error",
+    //   });
+    // } else {
+    //   toaster.create({
+    //     title: "Success",
+    //     description: message,
+    //     type: "success",
+    //   });
+
+      // Reset form after successful product creation
+    //   setNewProduct({ name: "", price: "", image: "" });
+    // }
+
   }
 
   return (
+
     <Container maxW={"container.sm"}>
       <VStack spacing={8}>
         <Heading as={"h1"} size={"2xl"} textAlign={"center"} mb={8}>
