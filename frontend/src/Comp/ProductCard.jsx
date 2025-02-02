@@ -45,7 +45,7 @@ const ProductCard = ({ product }) => {
 
   const handleUpdateProduct = () => {
     updateProduct(product._id, editedProduct);
-    setIsDialogOpen(false); // Close the dialog after updating
+    setIsDialogOpen(false);
   };
 
   const handleDeleteProduct = async (pid) => {
