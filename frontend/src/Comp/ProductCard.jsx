@@ -29,7 +29,6 @@ const ProductCard = ({ product }) => {
 
   const { deleteProduct, updateProduct } = useProductStore();
 
-  // State for editable fields
   const [editedProduct, setEditedProduct] = useState({
     name: product.name,
     price: product.price,
