@@ -13,9 +13,9 @@ const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode()
 
   return (
-    <Container maxW={"1140px"} px={4}>
+    <Container maxW={"11400px"} px={12}>
       <Flex
-        h={16}
+        h={20}
         alignItems={"center"}
         justifyContent={"space-between"}
         flexDir={{

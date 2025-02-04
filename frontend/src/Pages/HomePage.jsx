@@ -14,10 +14,10 @@ const HomePage = () => {
   console.log("products", products)
 
   return (
-    <Container maxW={'container.xl'} py={12}>
-      <VStack spacing={8}>
+    <Container maxW={'container.xl'} py={50}>
+      <VStack spacing={9}>
         <Text
-        fontSize={"30"}
+        fontSize={"60"}
         fontWeight={"bold"}
         bgGradient={"linear(to-r, cyan.400, blue.500)"}
         // bgClip={"text"}
@@ -45,7 +45,7 @@ const HomePage = () => {
           No Products Found!{"  "}
           <Link to={"/create"}>
           <Text as={'span'} color={'blue.300'} _hover={{ textDecoration: "underline" }}>
-            Click here to create a product
+            Click here to create a product.
             </Text>
             </Link>
         </Text>

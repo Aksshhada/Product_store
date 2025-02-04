@@ -9,6 +9,7 @@ import {
   Input,
   Button,
   VStack,
+  useDisclosure,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { MdEdit, MdDelete } from "react-icons/md";
@@ -28,6 +29,7 @@ const ProductCard = ({ product }) => {
   const bg = useColorModeValue("white", "gray.800");
 
   const { deleteProduct, updateProduct } = useProductStore();
+  const { isOpen, onOpen, onClose } = useDisclosure()
 
   const [editedProduct, setEditedProduct] = useState({
     name: product.name,
@@ -59,6 +61,7 @@ const ProductCard = ({ product }) => {
       transition={"all 0.3s"}
       _hover={{ transform: "translateY(-5px)", shadow: "xl" }}
       bg={bg}
+      m={5}
     >
       <Image
         src={product.image}
@@ -79,7 +82,7 @@ const ProductCard = ({ product }) => {
           {/* Open Dialog */}
           {/* <IconButton icon={<MdEdit />} onClick={() => setIsDialogOpen(true)} /> */}
           <Button>
-            <MdEdit onClick={() => setIsDialogOpen(true)}
+            <MdEdit onClick onOpen
             color="blue" />
           </Button>
           {/* <IconButton
@@ -94,6 +97,41 @@ const ProductCard = ({ product }) => {
           </Button>
         </HStack>
       </Box>
+
+      {/* <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Update Product</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <VStack spacing={4}>
+              <Input
+                  name="name"
+                  placeholder="Product Name"
+                  value={editedProduct.name}
+                  onChange={handleInputChange}
+                />
+                <Input
+                  name="price"
+                  type="number"
+                  placeholder="Product Price"
+                  value={editedProduct.price}
+                  onChange={handleInputChange}
+                />
+                <Input
+                  name="image"
+                  placeholder="Image URL"
+                  value={editedProduct.image}
+                  onChange={handleInputChange}
+                />
+            </VStack>
+          </ModalBody>
+        </ModalContent>
+      </Modal> */}
+
+
+
+
 
       {/* Edit Product Dialog */}
       {isDialogOpen && (
@@ -138,7 +176,7 @@ const ProductCard = ({ product }) => {
             </DialogFooter>
           </DialogContent>
         </DialogRoot>
-      )}
+       )}
     </Box>
   );
 };
