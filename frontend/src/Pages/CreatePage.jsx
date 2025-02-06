@@ -47,6 +47,7 @@ const CreatePage = () => {
     //   // Reset form after successful product creation
     //   setNewProduct({ name: "", price: "", image: "" });
     // }
+    
   };
 
   return (
