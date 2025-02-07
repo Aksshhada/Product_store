@@ -36,7 +36,7 @@ const Navbar = () => {
       >
         <Text
         bgGradient='linear(to-l, #7928CA, #FF0080)'
-        color={"blue.300"}
+        color={"white"}
         fontSize='2xl'
         fontWeight='extrabold'>Product Store 🛒
         </Text>
