@@ -205,7 +205,6 @@ export default ProductCard;
 
 
 
-
 // import { DeleteIcon, EditIcon } from "@chakra-ui/icons";
 // import {
 // 	Box,

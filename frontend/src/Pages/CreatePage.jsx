@@ -126,6 +126,19 @@
 
 // export default CreatePage;
 
+
+
+
+
+
+
+
+
+
+
+
+//working code
+
 import { useColorModeValue } from "@/components/ui/color-mode";
 import { useProductStore } from "@/store/product";
 import {
@@ -149,7 +162,6 @@ const CreatePage = () => {
 
   const handleAddProduct = async () => {
     const { success, message } = await createProduct(newProduct);
-    // Handle success/failure messages (commented out for now)
   };
 
   return (
