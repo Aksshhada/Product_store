@@ -32,7 +32,8 @@ const Navbar = () => {
         boxShadow="md"
         zIndex={1000}  // Ensures navbar stays on top
         p={4}
-        rounded={15}
+        // rounded={12}
+        borderBottomRadius={15}
       >
         <Text
         bgGradient='linear(to-l, #7928CA, #FF0080)'
