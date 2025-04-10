@@ -82,10 +82,21 @@ const ProductCard = ({ product }) => {
         <HStack spacing={8}>
           {/* Open Dialog */}
           {/* <IconButton icon={<MdEdit />} onClick={() => setIsDialogOpen(true)} /> */}
-          <Button>
+
+
+          <Button onClick={() => setIsDialogOpen(true)}>
             <MdEdit onClick onOpen
             color="blue" />
           </Button>
+
+
+{/* 
+          <Button onClick={() => setIsDialogOpen(true)} colorScheme="blue" leftIcon={<MdEdit />}>
+          Edit
+          </Button> */}
+
+
+
           {/* <IconButton
             icon={<MdDelete />}
             onClick={() => handleDeleteProduct(product._id)}
